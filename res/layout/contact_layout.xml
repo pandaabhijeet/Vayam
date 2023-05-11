@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/_50sdp" android:layout_marginBottom="@dimen/_6sdp" android:paddingStart="@dimen/_5sdp" android:paddingEnd="@dimen/_5sdp">
+    <p008de.hdodenhof.circleimageview.CircleImageView android:id="@+id/contactImage" android:layout_width="@dimen/_50sdp" android:layout_height="match_parent"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/_2sdp" android:paddingBottom="@dimen/_2sdp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <TextView android:textSize="@dimen/_14ssp" android:textStyle="bold" android:textColor="@color/ColorBlack" android:id="@+id/contactName" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="Contact Name" android:layout_weight="1" android:paddingStart="@dimen/_5sdp"/>
+            <TextView android:textSize="@dimen/_14ssp" android:textStyle="bold" android:textColor="@color/ColorGray" android:id="@+id/contactPhone" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="1111111111" android:layout_weight="1" android:textAlignment="viewEnd" android:paddingEnd="@dimen/_10sdp"/>
+        </LinearLayout>
+        <TextView android:textSize="@dimen/_12ssp" android:textStyle="italic" android:textColor="@color/ColorGray" android:id="@+id/contactStatus" android:paddingTop="@dimen/_2sdp" android:paddingBottom="@dimen/_2sdp" android:layout_width="match_parent" android:layout_height="0dp" android:hint="We are On !" android:layout_weight="1" android:textAllCaps="false" android:paddingStart="@dimen/_10sdp" android:paddingEnd="@dimen/_5sdp"/>
+        <View android:background="#c0c0c0" android:layout_width="match_parent" android:layout_height="@dimen/_1sdp" android:layout_marginTop="@dimen/_6sdp"/>
+    </LinearLayout>
+</LinearLayout>

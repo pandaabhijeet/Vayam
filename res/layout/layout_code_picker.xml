@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:dist="http://schemas.android.com/apk/distribution" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/countryCodeHolder" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/rlClickConsumer" android:padding="@dimen/ccp_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center_vertical" android:id="@+id/linear_flag_holder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/google_1x" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/google_1x">
+            <LinearLayout android:id="@+id/linear_flag_border" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/image_flag" android:layout_width="wrap_content" android:layout_height="18dp" android:layout_margin="0.5dp" android:src="@drawable/flag_india" android:adjustViewBounds="true"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="18sp" android:textColor="@android:color/black" android:id="@+id/textView_selectedCountry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(IN) +91" android:singleLine="true" android:layout_toRightOf="@+id/linear_flag_holder" android:layout_centerVertical="true" android:layout_toEndOf="@+id/linear_flag_holder"/>
+        <ImageView android:id="@+id/imageView_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true" android:tint="@android:color/black" android:layout_toRightOf="@+id/textView_selectedCountry" android:layout_centerVertical="true" android:alpha="0.6" android:layout_toEndOf="@+id/textView_selectedCountry" app:srcCompat="@drawable/ccp_ic_arrow_drop_down"/>
+    </RelativeLayout>
+</RelativeLayout>
