@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:dist="http://schemas.android.com/apk/distribution" xmlns:app="http://schemas.android.com/apk/res-auto" android:versionCode="1" android:versionName="1.0" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="com.example.vayam.png" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="29"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <module dist:instant="true"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/vayam" android:debuggable="true" android:allowBackup="true" android:supportsRtl="true" android:roundIcon="@mipmap/ic_launcher_round" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity android:name="com.example.vayam.regVerifyActivity"/>
+        <activity android:name="com.example.vayam.verificationActivity"/>
+        <activity android:name="com.example.vayam.UIPreferencesActivity"/>
+        <activity android:name="com.example.vayam.FindFriendsActivity"/>
+        <activity android:name="com.example.vayam.AccountActivity"/>
+        <activity android:name="com.example.vayam.SettingsActivity"/>
+        <activity android:name="com.example.vayam.registerActivity"/>
+        <activity android:name="com.example.vayam.loginActivity"/>
+        <activity android:name="com.example.vayam.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.vayam.MainActivity"/>
+        <activity android:theme="@style/Base.Theme.AppCompat" android:name="com.theartofdev.edmodo.cropper.CropImageActivity"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.firebase.auth.internal.GenericIdpActivity" android:exported="true" android:excludeFromRecents="true" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="genericidp" android:host="firebase.auth" android:path="/"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.firebase.auth.internal.RecaptchaActivity" android:exported="true" android:excludeFromRecents="true" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="recaptcha" android:host="firebase.auth" android:path="/"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.auth.api.gms.service.START"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <provider android:name="com.squareup.picasso.PicassoProvider" android:exported="false" android:authorities="com.example.vayam.png.com.squareup.picasso"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.example.vayam.png.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    </application>
+</manifest>
